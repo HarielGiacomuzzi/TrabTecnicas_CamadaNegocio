@@ -8,13 +8,21 @@ package Negocio;
  *
  * @author Bernardo Copstein
  */
+
 public class CalculoIrpfFactory {
-    public CalculoIrpf createInstance(TipoCalculo t) {
+	private CalculoIrpfSimplificado simples;
+	private CalculoIrpfCompleto completo;
+	
+	public CalculoIrpf createInstance(TipoCalculo t) {
         switch(t) {
             case SIMPLIFICADO:
-                return new CalculoIrpfSimplificado();
+              if (simples == null)
+            	  return new CalculoIrpfSimplificado();
+              return simples;
             case COMPLETO:
-                return new CalculoIrpfCompleto();
+                if (completo == null)
+                	return new CalculoIrpfCompleto();
+                return completo;
         }
         return null;
     }
