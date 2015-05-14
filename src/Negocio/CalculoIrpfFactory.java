@@ -16,12 +16,16 @@ public class CalculoIrpfFactory {
 	public CalculoIrpf createInstance(TipoCalculo t) {
         switch(t) {
             case SIMPLIFICADO:
-              if (simples == null)
-            	  return new CalculoIrpfSimplificado();
+              if (simples == null){
+            	  simples =  new CalculoIrpfSimplificado();
+              	  return simples;
+              }
               return simples;
             case COMPLETO:
-                if (completo == null)
-                	return new CalculoIrpfCompleto();
+                if (completo == null){
+                	completo =  new CalculoIrpfCompleto();
+                	return completo;
+                }
                 return completo;
         }
         return null;
