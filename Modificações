@@ -5,3 +5,4 @@ Modificações Nescessárias
 3 - Adaptar a classe CalculoIRPFNaturalizado
 4 - Adicionar no enum o tipo de calculo Naturalizado
 5 - Modificar a Factory para criar um objeto do novo tipo do adaptador
+6 - Criar a action do botão de calculo
