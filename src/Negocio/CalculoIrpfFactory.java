@@ -12,6 +12,7 @@ package Negocio;
 public class CalculoIrpfFactory {
 	private CalculoIrpfSimplificado simples;
 	private CalculoIrpfCompleto completo;
+	private CalculoIrpfNaturalizadoAdapter naturalizado;
 	
 	public CalculoIrpf createInstance(TipoCalculo t) {
         switch(t) {
@@ -25,6 +26,12 @@ public class CalculoIrpfFactory {
                 if (completo == null){
                 	completo =  new CalculoIrpfCompleto();
                 	return completo;
+                }
+                return completo;
+            case NATURALIZADO:
+                if (naturalizado == null){
+                	naturalizado =  new CalculoIrpfNaturalizadoAdapter();
+                	return naturalizado;
                 }
                 return completo;
         }

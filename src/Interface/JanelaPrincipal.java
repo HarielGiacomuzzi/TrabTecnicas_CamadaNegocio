@@ -9,7 +9,10 @@ import Negocio.Contribuinte;
 import Negocio.IrpfException;
 import Negocio.TipoCalculo;
 import Persistencia.InicializadorBancoDadosDataSource;
+
 import java.io.IOException;
+
+import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import javax.swing.ListModel;
 
@@ -69,6 +72,7 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         btSalva = new javax.swing.JButton();
         btSel = new javax.swing.JButton();
         butCalcSimples = new javax.swing.JButton();
+        butCalcNaturalizado = new javax.swing.JButton();
         butCalcCompleto = new javax.swing.JButton();
         butConsIdosos = new javax.swing.JButton();
 

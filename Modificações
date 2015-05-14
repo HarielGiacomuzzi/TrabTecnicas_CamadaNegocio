@@ -1,0 +1,7 @@
+Modificações Nescessárias
+
+1 - Adicionar Botão de calculo de IRPF Naturalizado na UI do sistema
+2 - Criar um adapter que implemente a interface CalculoIRPF
+3 - Adaptar a classe CalculoIRPFNaturalizado
+4 - Adicionar no enum o tipo de calculo Naturalizado
+5 - Modificar a Factory para criar um objeto do novo tipo do adaptador
